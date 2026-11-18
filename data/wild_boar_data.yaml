@@ -1,0 +1,7 @@
+names:
+  0: wild_boar
+path: /kaggle/input/datasets/angadahir/wild-boar-dataset-yolo-annotated/Wild Boar
+  Dataset
+test: images/test
+train: images/train
+val: images/val

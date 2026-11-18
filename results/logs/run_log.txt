@@ -1,0 +1,171 @@
+01:41:47 SMOKE_TEST=False  CUDA=True  OUT=/kaggle/working/revision_outputs
+01:41:47 ===== [check] start =====
+01:41:47 torch 2.11.0+cu130 | CUDA True | Tesla T4
+01:41:56 ultralytics 8.4.213 | timm 1.0.30 | numpy 2.1.3 | sklearn 1.6.1 | scipy 1.16.3
+01:42:03 open_clip 4.2.2
+01:42:03 ===== [check] done in 0.26 min =====
+01:42:03 ===== [discover] start =====
+01:42:09 Known (wild boar) root : /kaggle/input/datasets/angadahir/wild-boar-dataset-yolo-annotated/Wild Boar Dataset
+01:42:09 Unknown wildlife root  : /kaggle/input/datasets/ankanghosh651/object-detection-wildlife-dataset-yolo-format/final_data
+01:42:09 90-animals root        : /kaggle/input/datasets/iamsouravbanerjee/animal-image-dataset-90-different-animals/animals/animals
+01:42:09 Wildlife class names: {0: 'buffalo', 1: 'elephant', 2: 'rhino', 3: 'zebra'}
+01:51:12 
+       source  split      group       species  n_images
+0       ani90    ext    far_ext      elephant        60
+1       ani90    ext    far_ext    rhinoceros        60
+2       ani90    ext    far_ext         zebra        60
+3       ani90    ext  known_ext          boar        60
+4       ani90    ext   near_ood        badger        60
+5       ani90    ext   near_ood          bear        60
+6       ani90    ext   near_ood         bison        60
+7       ani90    ext   near_ood           cow        60
+8       ani90    ext   near_ood          deer        60
+9       ani90    ext   near_ood           dog        60
+10      ani90    ext   near_ood          goat        60
+11      ani90    ext   near_ood  hippopotamus        60
+12      ani90    ext   near_ood         hyena        60
+13      ani90    ext   near_ood            ox        60
+14      ani90    ext   near_ood           pig        60
+15      ani90    ext   near_ood     porcupine        60
+16      ani90    ext   near_ood         sheep        60
+17      ani90    ext   near_ood        wombat        60
+18  boar_main   test      known     wild_boar       868
+19  boar_main  train      known     wild_boar      6160
+20  boar_main    val      known     wild_boar      1745
+21  wild_main   test    unknown       buffalo        30
+22  wild_main   test    unknown      elephant        32
+23  wild_main   test    unknown         mixed         4
+24  wild_main   test    unknown         rhino        39
+25  wild_main   test    unknown         zebra        46
+26  wild_main    val    unknown       buffalo        38
+27  wild_main    val    unknown      elephant        42
+28  wild_main    val    unknown         mixed         1
+29  wild_main    val    unknown         rhino        41
+30  wild_main    val    unknown         zebra        28
+01:51:12 ===== [discover] done in 9.15 min =====
+01:51:12 ===== [yolo_train] start =====
+01:51:12 YOLO seed 0: training from yolov8n.pt
+02:39:20 YOLO seed 0: finished
+02:39:20 YOLO seed 1: training from yolov8n.pt
+03:22:15 YOLO seed 1: finished
+03:22:15 YOLO seed 2: training from yolov8n.pt
+04:08:52 YOLO seed 2: finished
+04:08:52 ===== [yolo_train] done in 137.67 min =====
+04:08:52 ===== [yolo_eval] start =====
+04:10:29 seed 0: predicted 256/10154
+04:10:31 seed 0: predicted 512/10154
+04:10:33 seed 0: predicted 768/10154
+04:10:35 seed 0: predicted 1024/10154
+04:10:38 seed 0: predicted 1280/10154
+04:10:40 seed 0: predicted 1536/10154
+04:10:42 seed 0: predicted 1792/10154
+04:10:44 seed 0: predicted 2048/10154
+04:10:47 seed 0: predicted 2304/10154
+04:10:49 seed 0: predicted 2560/10154
+04:10:51 seed 0: predicted 2816/10154
+04:10:53 seed 0: predicted 3072/10154
+04:10:55 seed 0: predicted 3328/10154
+04:10:58 seed 0: predicted 3584/10154
+04:11:00 seed 0: predicted 3840/10154
+04:11:02 seed 0: predicted 4096/10154
+04:11:04 seed 0: predicted 4352/10154
+04:11:06 seed 0: predicted 4608/10154
+04:11:08 seed 0: predicted 4864/10154
+04:11:10 seed 0: predicted 5120/10154
+04:11:13 seed 0: predicted 5376/10154
+04:11:15 seed 0: predicted 5632/10154
+04:11:17 seed 0: predicted 5888/10154
+04:11:19 seed 0: predicted 6144/10154
+04:11:22 seed 0: predicted 6400/10154
+04:11:24 seed 0: predicted 6656/10154
+04:11:26 seed 0: predicted 6912/10154
+04:11:28 seed 0: predicted 7168/10154
+04:11:30 seed 0: predicted 7424/10154
+04:11:32 seed 0: predicted 7680/10154
+04:11:35 seed 0: predicted 7936/10154
+04:11:37 seed 0: predicted 8192/10154
+04:11:39 seed 0: predicted 8448/10154
+04:11:41 seed 0: predicted 8704/10154
+04:11:58 seed 0: predicted 8960/10154
+04:12:18 seed 0: predicted 9216/10154
+04:12:38 seed 0: predicted 9472/10154
+04:12:58 seed 0: predicted 9728/10154
+04:13:17 seed 0: predicted 9984/10154
+04:13:30 seed 0: predicted 10154/10154
+04:14:32 seed 1: predicted 256/3994
+04:14:34 seed 1: predicted 512/3994
+04:14:36 seed 1: predicted 768/3994
+04:14:38 seed 1: predicted 1024/3994
+04:14:40 seed 1: predicted 1280/3994
+04:14:43 seed 1: predicted 1536/3994
+04:14:45 seed 1: predicted 1792/3994
+04:14:47 seed 1: predicted 2048/3994
+04:14:49 seed 1: predicted 2304/3994
+04:14:51 seed 1: predicted 2560/3994
+04:14:56 seed 1: predicted 2816/3994
+04:14:59 seed 1: predicted 3072/3994
+04:15:03 seed 1: predicted 3328/3994
+04:15:07 seed 1: predicted 3584/3994
+04:15:10 seed 1: predicted 3840/3994
+04:15:13 seed 1: predicted 3994/3994
+04:16:14 seed 2: predicted 256/3994
+04:16:17 seed 2: predicted 512/3994
+04:16:19 seed 2: predicted 768/3994
+04:16:21 seed 2: predicted 1024/3994
+04:16:23 seed 2: predicted 1280/3994
+04:16:25 seed 2: predicted 1536/3994
+04:16:27 seed 2: predicted 1792/3994
+04:16:29 seed 2: predicted 2048/3994
+04:16:31 seed 2: predicted 2304/3994
+04:16:34 seed 2: predicted 2560/3994
+04:16:38 seed 2: predicted 2816/3994
+04:16:42 seed 2: predicted 3072/3994
+04:16:46 seed 2: predicted 3328/3994
+04:16:49 seed 2: predicted 3584/3994
+04:16:53 seed 2: predicted 3840/3994
+04:16:55 seed 2: predicted 3994/3994
+04:16:55 ===== [yolo_eval] done in 8.05 min =====
+04:16:55 ===== [features] start =====
+04:17:04 loaded vit_b16: vit_base_patch16_224 mean=(0.5, 0.5, 0.5) std=(0.5, 0.5, 0.5)
+04:17:08 loaded dinov2_b14: vit_base_patch14_dinov2.lvd142m mean=(0.485, 0.456, 0.406) std=(0.229, 0.224, 0.225)
+04:17:14 loaded bioclip: hf-hub:imageomics/bioclip
+04:18:12 features 1280/10154  (1.0 min)
+04:19:04 features 2560/10154  (1.8 min)
+04:19:56 features 3840/10154  (2.7 min)
+04:20:48 features 5120/10154  (3.6 min)
+04:21:41 features 6400/10154  (4.4 min)
+04:22:33 features 7680/10154  (5.3 min)
+04:23:26 features 8960/10154  (6.2 min)
+04:24:15 features 10154/10154  (7.0 min)
+04:24:17 unreadable images: 0
+04:24:17 ===== [features] done in 7.37 min =====
+04:24:17 ===== [analysis] start =====
+04:24:17 {'train': 6160, 'cal_k': 1745, 'cal_u': 150, 'te_k': 868, 'te_u': 151, 'known_ext': 60, 'near_ood': 840, 'far_ext': 180}
+04:24:18 feature sets: [('bioclip', 'bg'), ('bioclip', 'full'), ('bioclip', 'gtroi'), ('bioclip', 'yoloroi'), ('dinov2_b14', 'bg'), ('dinov2_b14', 'full'), ('dinov2_b14', 'gtroi'), ('dinov2_b14', 'yoloroi'), ('vit_b16', 'bg'), ('vit_b16', 'full'), ('vit_b16', 'gtroi'), ('vit_b16', 'yoloroi')]
+04:24:36 scored bioclip/bg in 18.5s
+04:24:53 scored bioclip/full in 16.9s
+04:25:10 scored bioclip/gtroi in 17.1s
+04:25:27 scored bioclip/yoloroi in 17.2s
+04:25:50 scored dinov2_b14/bg in 22.4s
+04:26:11 scored dinov2_b14/full in 21.4s
+04:26:34 scored dinov2_b14/gtroi in 22.9s
+04:26:57 scored dinov2_b14/yoloroi in 23.1s
+04:27:21 scored vit_b16/bg in 23.5s
+04:27:47 scored vit_b16/full in 26.3s
+04:28:15 scored vit_b16/gtroi in 28.2s
+04:28:37 scored vit_b16/yoloroi in 22.1s
+04:29:24    block 'paired comparison vs. the submitted method' ok (0.1s)
+04:29:24    block 'per-species analysis (R1-3)' ok (0.3s)
+04:29:24    block 'external / near-OOD / cross-source tests (R1-3, R1-4, R2-4)' ok (0.1s)
+04:29:47    block 'background-bias analysis (R1-4)' ok (22.9s)
+04:29:50    block 'near-duplicate audit (leakage check)' ok (2.7s)
+04:30:32    block 'calibration variability (R1-5)' ok (41.9s)
+04:30:32    block 'threshold sensitivity (replaces old Table 9; descriptive only)' ok (0.0s)
+04:30:32    block 'YOLO detection summary and real training curves' ok (0.0s)
+04:30:32    block 'Weibull parameters (all backbones/views)' ok (0.0s)
+04:30:34    block 'per-sample scores (R1-7)' ok (2.3s)
+04:30:40    block 'figures' ok (5.5s)
+04:30:40 summary written
+04:30:40    block 'summary' ok (0.1s)
+04:30:40 ===== [analysis] done in 6.38 min =====
+04:30:40 ===== [package] start =====

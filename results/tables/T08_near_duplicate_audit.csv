@@ -1,0 +1,4 @@
+pair,n,median_max_cos,n_ge_0_95,n_ge_0_98,n_ge_0_99
+boar test vs boar train,868,0.9873138397261396,612,495,408
+boar val vs boar train,1745,0.9886220640798132,1230,1010,839
+wildlife test vs wildlife val,151,0.8108966856897992,1,1,1

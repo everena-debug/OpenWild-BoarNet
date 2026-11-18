@@ -1,0 +1,26 @@
+{
+  "check": {
+    "ok": true,
+    "minutes": 0.26
+  },
+  "discover": {
+    "ok": true,
+    "minutes": 9.15
+  },
+  "yolo_train": {
+    "ok": true,
+    "minutes": 137.67
+  },
+  "yolo_eval": {
+    "ok": true,
+    "minutes": 8.05
+  },
+  "features": {
+    "ok": true,
+    "minutes": 7.37
+  },
+  "analysis": {
+    "ok": true,
+    "minutes": 6.38
+  }
+}

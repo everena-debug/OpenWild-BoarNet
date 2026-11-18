@@ -1,0 +1,27 @@
+digraph G {
+  graph [rankdir=TB, nodesep=0.12, ranksep=0.14, fontname="DejaVu Sans", pad=0.03, dpi=300];
+  node  [shape=box, style="rounded,filled", fillcolor="#EEF3FA", color="#4A6FA5", fontname="DejaVu Sans", fontsize=10, height=0.3, margin="0.05,0.03"];
+  edge  [color="#4A6FA5", arrowsize=0.55, fontname="DejaVu Sans", fontsize=9];
+  in   [label="Input field image I"];
+  yolo [label="YOLOv8n wild-boar\ndetector"];
+  gate [shape=diamond, label="Box with\nc ≥ 0.25?", fillcolor="#FFF6E5", color="#C78A1E", margin="0.02,0.02"];
+  none [label="Reject\n(no boar)", fillcolor="#FDECEC", color="#B03A2E"];
+  crop [label="Top box crop (10% pad)\n224 × 224"];
+  vit  [label="Frozen ViT-B/16\nz ∈ R^768"];
+  dist [label="Cosine distance d\nto prototype μ"];
+  evt  [label="Weibull EVT score\nS_U = F_W(d; k, λ)"];
+  cal  [label="τ frozen on\nvalidation", fillcolor="#F4F4F4", color="#777777"];
+  dec  [shape=diamond, label="S_U > τ ?", fillcolor="#FFF6E5", color="#C78A1E", margin="0.02,0.02"];
+  unk  [label="Unknown\nintrusion", fillcolor="#FDECEC", color="#B03A2E"];
+  kn   [label="Known\nwild boar", fillcolor="#EAF6EC", color="#2E7D32"];
+  in -> yolo -> gate;
+  gate -> none [label="no"];
+  gate -> crop [label="yes"];
+  crop -> vit -> dist -> evt -> dec;
+  cal -> dec [style=dashed, color="#777777"];
+  dec -> unk [label="yes"];
+  dec -> kn  [label="no"];
+  {rank=same; gate; none}
+  {rank=same; evt; cal}
+  {rank=same; unk; kn}
+}
